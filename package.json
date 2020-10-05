@@ -1,0 +1,19 @@
+{
+  "name": "academic-api",
+  "version": "1.0.0",
+  "description": "API académica para estudiantes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "rest"
+  ],
+  "author": "Julián Andrés Flórez Cendales",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.2",
+    "mongoose": "^5.10.7"
+  }
+}

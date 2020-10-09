@@ -14,13 +14,21 @@ const urlEncodedParser = bodyParser.urlencoded(
 app.use(jsonParser);
 app.use(urlEncodedParser);
 
+const ipFn = require('./middleware/getIpAddress');
+app.use("*", ipFn)
+
 /** Methods */
 app.get("/", (req, res, next) => {
     res.send("Welcome to academic rest api.");
 });
 
-const ipFn = require('./middleware/getIpAddress');
-app.use("*", ipFn)
+// User Routes Loading
+const userRoutes = require("./routes/user.routes");
+userRoutes(app);
+
+// token middleware
+tkFn = require("./middleware/verifyToken")
+app.use(tkFn)
 
 // Student Routes Loading
 const studentRoutes = require("./routes/student.routes");

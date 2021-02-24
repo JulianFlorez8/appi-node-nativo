@@ -1,20 +1,24 @@
 {
-    "db-connections": {
-        "mongodb": {
-            "host": "cluster0.br2rh.mongodb.net",
-            "user": "JulianF",
-            "password": "vyj6DurvPHWm0Iqc",
-            "dbname": "AcademicDB"
-        }
-    },
-    "secretkeys": {
-        "cryptojs": "L$zZB_uLe6dNj3#5",
-        "jwt": "ABC@202054*"
-    },
-    "roles": {
-        "student": 1,
-        "teacher": 2
-    },
-    "server-port": 3000,
-    "sessionTime": 3600
+  "db-connections": {
+    "mongodb": {
+      "host": "cluster0.br2rh.mongodb.net",
+      "user": "JulianF",
+      "password": "vyj6DurvPHWm0Iqc",
+      "dbname": "AcademicDB"
+    }
+  },
+  "secretkeys": {
+    "cryptojs": "L$zZB_uLe6dNj3#5",
+    "jwt": "ABC@202054*"
+  },
+  "roles": {
+    "student": 1,
+    "teacher": 2
+  },
+  "user": {
+    "username": 1701913963,
+    "password": 1234
+  },
+  "server-port": 3000,
+  "sessionTime": 3600
 }

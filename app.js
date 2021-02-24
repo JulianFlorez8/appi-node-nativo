@@ -7,19 +7,17 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = config.get("server-port");
 const jsonParser = bodyParser.json();
-const urlEncodedParser = bodyParser.urlencoded(
-    { extended: true }
-);
+const urlEncodedParser = bodyParser.urlencoded({ extended: true });
 
 app.use(jsonParser);
 app.use(urlEncodedParser);
 
-const ipFn = require('./middleware/getIpAddress');
-app.use("*", ipFn)
+const ipFn = require("./middleware/getIpAddress");
+app.use("*", ipFn);
 
 /** Methods */
 app.get("/", (req, res, next) => {
-    res.send("Welcome to academic rest api.");
+  res.send("Welcome to academic rest api.");
 });
 
 // User Routes Loading
@@ -27,8 +25,8 @@ const userRoutes = require("./routes/user.routes");
 userRoutes(app);
 
 // token middleware
-tkFn = require("./middleware/verifyToken")
-app.use(tkFn)
+tkFn = require("./middleware/verifyToken");
+app.use(tkFn);
 
 // Student Routes Loading
 const studentRoutes = require("./routes/student.routes");
@@ -55,5 +53,7 @@ const departmentRoutes = require("./routes/department.routes");
 departmentRoutes(app);
 
 app.listen(port, () => {
-    console.log("Server is running...")
+  console.log("Server is running...");
 });
+
+//para generar el token: la clave del user 1701913963 es 1234
